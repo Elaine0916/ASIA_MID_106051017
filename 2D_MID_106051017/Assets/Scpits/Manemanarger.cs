@@ -1,14 +1,13 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Manemanerger : MonoBehaviour
+public class Manemanarger : MonoBehaviour
 {
-    void StartGmae()
+    public void StartGmae ()
     {
 
     } 
 
-    void QuitGmae()
+    public void QuitGmae ()
     {
 
 
