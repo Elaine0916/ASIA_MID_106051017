@@ -15,8 +15,8 @@ public class LevelManager : MonoBehaviour
     }
 
 
-    public void Quit ()
+    public void Quit()
     {
-        Application.Quit;
+        Application.Quit();
     }
 }
