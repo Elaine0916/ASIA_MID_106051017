@@ -1,14 +1,32 @@
 ﻿
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
 
     public GameObject Final;
 
+    public Text textcount;
+
+    public int count;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("碰到終點");
+        if (collision.name == "結束指標")
+        {
+            Final.SetActive(true);
+        }
+
+        if (collision.tag == "水果")
+        {
+            Destroy(collision.gameObject);
+
+            count++;
+
+            textcount.text = count + "/9";
+        }
+        
     }
 
 }
