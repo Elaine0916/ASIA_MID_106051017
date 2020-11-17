@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
 
             count++;
 
-            textcount.text = count + "/9";
+            textcount.text = count + "/8";
         }
         
     }
