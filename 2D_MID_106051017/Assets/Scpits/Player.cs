@@ -11,6 +11,15 @@ public class Player : MonoBehaviour
 
     public int count;
 
+    private AudioSource audioSource;
+    public AudioClip eatSound;
+
+
+     void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.name == "結束指標")
@@ -26,7 +35,22 @@ public class Player : MonoBehaviour
 
             textcount.text = count + "/8";
         }
+
+        if (collision.gameObject.tag == "水果")
+        {
+            audioSource.PlayOneShot(eatSound);
+        }
+
         
+
+
+        
+
+
     }
+
+    
+
+
 
 }
